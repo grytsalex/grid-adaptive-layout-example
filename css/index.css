@@ -1,0 +1,290 @@
+body {
+    margin: 0; /*убираются стандартные отступы у <body/> */
+    padding: 0;
+    font-family: "Roboto", "sans-serif";
+}
+
+.main-container {
+    margin: 0 auto; /*блок позиционируется по центру родителя по горизонтали */
+    max-width: 1120px;
+    min-width: 320px;
+}
+
+/*header styles*/
+.menu-bar {
+    display: none;
+}
+
+.header-container {
+    width: 100%;
+    padding: 70px 32px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    box-sizing: border-box;
+}
+
+.main-logo {
+    width: 163px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    margin: 0 7px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.header-link:hover {
+    color: #4c665b;
+}
+
+.header-social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-social-icon {
+    margin: 0 8px;
+}
+
+.header-social-media:hover {
+    color: #4c665b;
+}
+
+.header-social-icon:hover {
+    color: black;
+}
+
+
+/* banner container */
+.banner-content-header {
+    text-transform: uppercase;
+    font-size: 36px;
+    width: 280px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 10px 0;
+    grid-area: header; /*встанет на место там где banner-template-are = header */
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: end;
+    padding: 32px;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.banner-content {
+    padding-left: 30px;
+    display: grid;
+    grid-template-areas: "header ."
+    "latest insta";
+}
+
+.banner-img-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-latest {
+    width: 230px;
+}
+
+.banner-latest-container {
+    grid-area: latest;
+}
+
+.banner-insta-container {
+    grid-area: insta;
+}
+
+.banner-content-img-container {
+    position: relative; /* контент внутри можно будет спозиционировать absolute, текст поверх картинок*/
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-bottom-text {
+    position: absolute;
+    /* используется только одно свойство из пары */
+    left: 30px; /*добавляет прослойку между левой границей контейнера и правой границей элемента */
+    bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+/*subscribe secrion */
+.subscribe {
+    background-color: #4C665B; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 32px;
+    padding: 10px 0 50px;
+}
+
+.subscribe-header {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.subscribe-input{
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px; 
+}
+
+.subscribe-mail {
+    width: 240px;
+}
+
+.subscribe-btn {
+    width: 170px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #EBEFEE;
+    cursor: pointer;
+    border: none;
+}
+
+/* blog section */
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* функция повторяет элемент с определнным размером */
+}
+
+.blog-item {
+    padding: 24px;
+}
+
+.blog-img {
+    width: 100%;
+}
+
+.blog-img-container {
+    position: relative; /*относительное позиционирование*/
+}
+
+.blog-img-desc-container {
+    position: absolute;
+    bottom: -70px; /* сдвигается вниз */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-img-desc {
+    background-color: #ECF0EF;
+    width: 150px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.underline {
+    background-color: black;
+    width: 45px;
+    height: 2px;
+    border: none;
+    margin: 3px auto;
+}
+
+.blog-desc-container {
+    margin-top: 90px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-align: justify; /*выровнять текст по ширине*/
+}
+
+/* insta section*/
+
+.insta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.insta-item {
+    padding: 24px;
+}
+
+.insta-item-img {
+    width: 100%;
+}
+
+.insta-item-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 24px;
+}
+
+/* footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #000;
+    padding: 40px;
+}
+
+.footer-logo {
+    width: 140px;
+    margin-bottom: 40px;
+}
+
+.footer-copyright {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* intro section */
+.intro {
+    padding: 32px 72px;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-column-gap: 22px;
+}
+
+.intro-header {
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-top: 16px;
+}
+
+.intro-text {
+    font-weight: lighter;
+    text-align: justify;
+}
